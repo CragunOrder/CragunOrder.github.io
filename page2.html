@@ -81,7 +81,7 @@
 
         <!-- Section 6 -->
         <div id="section6" class="hidden">
-            <h2>Choose Color</h2>
+            <h2>Choose a Color Pallette:</h2>
             <select id="colorDropdown" onchange="handleColorDropdown()">
                 <option value="Warm">Warm</option>
                 <option value="Soft">Soft</option>
@@ -91,9 +91,10 @@
             </select>
 
             <!-- Hex color picker input (initially hidden) -->
-            <div id="hexColorPicker" class="hidden">
-                <p>Choose a color (click the button below to open selection):</p>
-                <input type="color" id="colorPicker">
+            <div id="otherInput2" class="hidden">
+                <p>Enter a Color Style that's not listed:</p>
+                <p id="error"></p>
+                <input type="text" id="otherText2" placeholder="Type here">
             </div>
         </div>
 

@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("dropdown7")
     .addEventListener("change", onPaintOrStainChange);
-  // document
-  //   .getElementById("colorDropdown")
-  //   .addEventListener("change", onColorChange);
+  document
+    .getElementById("colorDropdown")
+    .addEventListener("change", handleColorDropdown);
   document.getElementById("otherText1").addEventListener("change", onclickk);
 });
 
@@ -66,7 +66,7 @@ function showNextSection() {
 
 function handleColorDropdown() {
   var colorDropdown = document.getElementById("colorDropdown");
-  var hexColorPicker = document.getElementById("hexColorPicker");
+  var hexColorPicker = document.getElementById("otherInput2");
 
   if (colorDropdown.value === "other") {
     hexColorPicker.style.display = "block";
@@ -83,6 +83,30 @@ function onclickk() {
 
   errorMessage.innerHTML = "";
   otherInput.style.display = dropdown1.value === "other" ? "block" : "none";
+
+  if (dropdown1.value === "other") {
+    var inputValue = otherText.value;
+    var validInput = /^[a-zA-Z0-9.]+$/.test(inputValue);
+
+    if (!validInput) {
+      errorMessage.innerHTML =
+        "Invalid characters detected. Please use only numbers, letters, or a period.";
+      canMoveOn = false;
+      return;
+    } else {
+      canMoveOn = true;
+    }
+  }
+}
+
+function onclickkk() {
+  var dropdown1 = document.getElementById("colorDropdown");
+  var otherInput = document.getElementById("otherInput2");
+  var otherText = document.getElementById("otherText2");
+  var errorMessage = document.getElementById("error");
+
+  errorMessage.innerHTML = "";
+  otherInput.style.display = dropdown2.value === "other" ? "block" : "none";
 
   if (dropdown1.value === "other") {
     var inputValue = otherText.value;
@@ -141,7 +165,7 @@ function saveChoices() {
   var choice4 = document.getElementById("dropdown4").value;
   var choice5 =
     document.getElementById("colorDropdown").value === "other"
-      ? document.getElementById("colorPicker").value
+      ? document.getElementById("otherText2").value
       : document.getElementById("colorDropdown").value;
   var choice6 = document.getElementById("dropdown6").value;
   var choice7 = document.getElementById("dropdown7").value;
