@@ -96,6 +96,8 @@ function onclickk() {
     } else {
       canMoveOn = true;
     }
+  } else {
+    canMoveOn = true;
   }
 }
 
@@ -120,6 +122,8 @@ function onclickkk() {
     } else {
       canMoveOn = true;
     }
+  } else {
+    canMoveOn = true;
   }
 }
 
