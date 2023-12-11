@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="assets/styles/pageOneStyle.css">
+</head>
+
+<body>
+    <script src="assets/js/pageOne.js"></script>
+
+    <div class="container" id="SUBMIT">
+        <h1>Welcome to Your Custom Gift Maker!</h1>
+        <p>Please enter your provided code to get started:</p>
+        <input type="text" id="codeInput" placeholder="Enter code">
+        <button onclick="checkCode()" class="buttonSub">Get Started</button>
+    </div>
+    <div id="welcomeMessage" class="container welcome-message">
+        <h3 id="welcomeMessageText"></h3>
+        <div id="ordersContainer"></div>
+        <button onclick="redirectToPage2()" class="buttonSub">Fill Out an order</button>
+    </div>
+    <hr>
+    <div class="container" id="FAQ">
+        <h2>FAQ</h2>
+        <h3>Don't Have a Code?</h3>
+        <p>This website was built for a select few who were provided with a certain code.
+            <br>If you happen to not have a code, and think you should have one, please contact<br>
+            Michael Cragun. He will help you with the selected code?
+        </p>
+        <h3>What is this place?</h3>
+        <p>This website is a way for me to provide Christmas options to those whom might be<br>
+            close to me, or to those who I select and would like to do something for! This was<br>
+            all made by hand, so I hope you like it!</p>
+    </div>
+</body>
+
+</html>

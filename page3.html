@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+    <link rel="stylesheet" href="assets/styles/pageThreeStyle.css">
+</head>
+
+<body>
+    <script src="assets/js/pageThree.js"></script>
+    <div class="container">
+        <h1>Order Submission!</h1>
+        <p>Review your choices:</p>
+        <!-- Display the choices retrieved from local storage -->
+        <p><span>Name:</span> <span id="name"></span></p>
+        <p><span>Shape:</span> <span id="displayChoice1"></span></p>
+        <p><span>Size:</span> <span id="displayChoice2"></span></p>
+        <p><span>Weight:</span> <span id="displayChoice3"></span></p>
+        <p><span>M/S:</span> <span id="displayChoice4"></span></p>
+        <p><span>Color Coating:</span> <span id="displayChoice7"></span></p>
+        <p><span>Color Choice (if applicable):</span> <span id="displayChoice5"></span></p>
+        <p><span>Dimension:</span> <span id="displayChoice6"></span></p>
+        <button onclick="submitChoices()" id="submisison">Submit</button>
+        <button onclick="window.location.href = 'index.html'" id="Home" style="display:none;">Go Home</button>
+        <p id="url"></p>
+    </div>
+
+</body>
+
+</html>
